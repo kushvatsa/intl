@@ -171,15 +171,15 @@ class NumberFormat {
           {String? locale, int? decimalDigits}) =>
       NumberFormat._forPattern(locale, (x) => x.PERCENT_PATTERN,
           decimalDigits: decimalDigits);
-
+          
   /// Create a number format that prints using [newPattern] as it applies in
   /// [locale] and [decimalDigits].
   /// If [decimalDigits] is specified, numbers will format with that many digits
   /// after the decimal place. If it's not, they will use the default.
-  NumberFormat.decimalNumberPattern(
+  factory NumberFormat.decimalNumberPattern(
       {String? newPattern, String? locale, int? decimalDigits}) =>
-      NumberFormat._forPattern(locale, (x) => newPattern,
-            decimalDigits: decimalDigits);
+       NumberFormat._forPattern(locale, (x) => newPattern,
+            decimalDigits: decimalDigits);  
 
   /// Create a number format that prints as SCIENTIFIC_PATTERN.
   factory NumberFormat.scientificPattern([String? locale]) =>
