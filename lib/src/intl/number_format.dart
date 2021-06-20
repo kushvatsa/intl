@@ -177,8 +177,8 @@ class NumberFormat {
   /// If [decimalDigits] is specified, numbers will format with that many digits
   /// after the decimal place. If it's not, they will use the default.
   NumberFormat.decimalNumberPattern(
-      {String? newPattern, String? locale, int? decimalDigits})
-      : NumberFormat._forPattern(locale, (x) => newPattern,
+      {String? newPattern, String? locale, int? decimalDigits}) =>
+      NumberFormat._forPattern(locale, (x) => newPattern,
             decimalDigits: decimalDigits);
 
   /// Create a number format that prints as SCIENTIFIC_PATTERN.
